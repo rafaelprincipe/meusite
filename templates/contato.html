@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Príncipe Advocacia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/areas">Áreas de Atuação</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/contato" class="btn-contato">Agendar Consulta</a></li>
+        </ul>
+    </nav>
+
+<h2>Entre em Contato</h2>
+<p>Atendimento direto com o advogado. Confidencial, ético e estratégico.</p>
+    <a class="whatsapp-btn" href="https://wa.me/5585997038366?text=Olá%2C%20gostaria%20de%20uma%20consulta">
+    Falar no WhatsApp
+</a>
+
+<form action="/enviar" method="post" class="form-contato">
+    <label for="nome">Nome</label>
+    <input type="text" id="nome" name="nome" required>
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="telefone">Telefone</label>
+    <input type="text" id="telefone" name="telefone">
+
+    <label for="mensagem">Mensagem</label>
+    <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+
+    <button type="submit" class="btn-acao">Enviar por E-mail</button>
+</form>
+
+<footer>
+    <p>© 2025 Rafael Príncipe Advocacia | Fortaleza - CE | OAB/CE 48.637</p>
+</footer>

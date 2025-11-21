@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre – Rafael Príncipe Advocacia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+        </div>
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/areas">Áreas de Atuação</a></li>
+            <li><a href="/sobre" class="active">Sobre</a></li>
+            <li><a href="/contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="sobre-container">
+    <div class="sobre-conteudo">
+
+        <!-- Texto à esquerda -->
+        <div class="sobre-texto">
+            <h1>Sobre o Advogado</h1>
+            <p>
+                O advogado Rafael Príncipe, inscrito na OABCE 48637, tem o compromisso de oferecer soluções
+                jurídicas eficazes e personalizadas. No escritório Rafael Príncipe Advocacia, atuamos com
+                excelência nas áreas do Direito Civil, Direito do Consumidor, Direito de Família, Direito Bancário
+                e Direito Previdenciário.
+            </p>
+            <p>
+                Com visão estratégica e linguagem acessível, conduz demandas jurídicas de forma
+                prática, eficiente e humana, buscando sempre a compreensão clara por parte do
+                cliente e resultados consistentes.
+            </p>
+            <p>
+                Possui habilidade em negociação, pesquisa jurídica, redação técnica e didática,
+                mantendo constante atualização profissional e compromisso com a ética e com a
+                entrega de soluções efetivas.
+            </p>
+            <p>Agradecemos sua visita e estamos prontos para solucionar suas dores jurídicas.
+            </p>
+
+            <h2>Missão</h2>
+            <p>
+                Nossa missão é solucionar as dores jurídicas dos nossos clientes, oferecendo serviços jurídicos de alta qualidade, atendimento personalizado e humanizado, de forma ética, transparente e eficiente. Buscamos sempre aprimorar nossos conhecimentos e técnicas, visando a excelência na prestação de serviços e a entrega de resultados para a satisfação dos nossos clientes..
+            </p>
+
+            <h2>Valores</h2>
+            <ul>
+                <li>Ética e transparência em todas as nossas relações e atividades, respeitando sempre os princípios e normas éticas da advocacia;
+</li>
+                <li>Excelência na prestação de serviços jurídicos, buscando sempre a melhor solução para os nossos clientes;
+</li>
+                <li>Atendimento humanizado e comprometido com os direitos e interesses dos nossos clientes, atuando de forma proativa e estratégica;
+</li>
+                <li>Respeito e valorização da diversidade, promovendo um ambiente inclusivo e colaborativo para a nossa equipe e clientes;
+</li>
+                <li>Inovação e aprimoramento constante, buscando sempre novas soluções e tecnologias para atender as demandas do mercado jurídico e dos nossos clientes;
+</li>
+                <li>Comunicação clara e eficaz, mantendo nossos clientes informados e atualizados sobre o andamento dos seus processos e projetos.</li>
+</ul>
+
+
+            <a href="/contato" class="btn-acao">Fale comigo</a>
+        </div>
+
+        <!-- Imagem à direita -->
+        <div class="sobre-imagem">
+            <img src="{{ url_for('static', filename='img/imagem3.jpg') }}" alt="Advogado">
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Rafael Príncipe Advocacia | Fortaleza - CE | OAB/CE 48.637</p>
+</footer>
