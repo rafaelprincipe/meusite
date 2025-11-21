@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Príncipe Advocacia</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo">
+        <ul>
+            <li><a href="/">Início</a></li>
+            <li><a href="/areas">Áreas de Atuação</a></li>
+            <li><a href="/sobre">Sobre</a></li>
+            <li><a href="/contato" class="btn-contato">Agendar Consulta</a></li>
+        </ul>
+    </nav>
+</header>
+<h2>Áreas de Atuação</h2>
+<div class="areas-container">
+    <div class="area-card"><h3>Direito Civil</h3>
+        <ul>
+            <li>Consultoria e elaboração de contratos.</li>
+            <li>Regularização de bens e propriedades.</li>
+            <li>Assessoria em questões de responsabilidade civil.</li>
+            <li>Ação de indenização de danos materiais e danos morais.</li>
+            <li>Mediação em conflitos familiares e patrimmoniais.</li>
+
+        </ul>
+    </div>
+    <div class="area-card"><h3>Direito do Consumidor</h3>
+        <ul>
+            <li>Indenização por danos morais.</li>
+            <li>Ação contra plano de saúde.</li>
+            <li>Análise de cláusulas abusivas em contratos.</li>
+            <li>Cancelamento ou atraso de voo.</li>
+            <li>Orientação sobre direitos e deveres do consumidor.</li>
+            <li>Corte indevido dos serviços de concessionárias.</li>
+            <li>Ligações excessivas de cobrança ou telemarketing.</li>
+
+        </ul>
+    </div>
+    <div class="area-card"><h3>Direito Bancário</h3>
+        <ul>
+            <li>Golpe do PIX.</li>
+            <li>Conta bancária bloqueada.</li>
+            <li>Ação revisional de consignado (RMC e RCC).</li>
+            <li>Cobrança de dívida indevida.</li>
+            <li>Limpar nome do Serasa e SPC.</li>
+            <li>Análise de cláusula abusiva.</li>
+        </ul>
+    </div>
+    <div class="area-card"><h3>Direito de Família</h3>
+        <ul>
+            <li>Ação de divórcio.</li>
+            <li>Ação de alimentos</li>
+            <li>Ação de paternidade</li>
+            <li>Ação de guarda e visitas</li>
+            <li>Inventário e partilha de bens</li>
+            <li>Testamento e planejamento sucessório</li>
+            <li>Reconhecimento e dissolução de união estável</li>
+        </ul>
+    </div>
+    <div class="area-card"><h3>Direito Previdenciário</h3>
+        <ul>
+            <li>Auxílio-doença</li>
+            <li>Auxílio-acidente</li>
+            <li>Auxílio-maternidade</li>
+            <li>Pensão por morte</li>
+            <li>Revisão de benefícios</li>
+            <li>Aposentadoria rural</li>
+            <li>Aposentadoria especial</li>
+            <li>Aposentadoria por invalidez</li>
+            <li>Aposentadoria por tempo de contribuição</li>
+            <li>Loas idoso e pessoa deficiente</li>
+        </ul>
+    </div>
+</div>
+
+<a href="/contato" class="cta-button">Quero falar com o advogado</a>
+
+<footer>
+    <p>© 2025 Rafael Príncipe Advocacia | Fortaleza - CE | OAB/CE 48.637</p>
+</footer>
