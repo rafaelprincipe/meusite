@@ -1,16 +1,45 @@
+import os
+import requests
 from flask import Flask, render_template, request
-from flask_mail import Mail, Message
 
 app = Flask(__name__)
 
-app.config['MAIL_SERVER'] = 'smtp.zoho.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'atendimento@rafaelprincipe.com.br'  # Seu e-mail
-app.config['MAIL_PASSWORD'] = '1&acnTkr'    # Sua senha ou App Password
-app.config['MAIL_DEFAULT_SENDER'] = 'atendimento@rafaelprincipe.com.br'
+@app.route('/')
+def index():
+    return render_template('index.html')
 
-mail = Mail(app)
+@app.route('/enviar', methods=['POST'])
+def enviar():
+    nome = request.form['nome']
+    email = request.form['email']
+    mensagem = request.form['mensagem']
+
+    data = {
+        "sender": {"name": "Site Rafael", "email": os.getenv("MAIL_USERNAME")},
+        "to": [{"email": os.getenv("MAIL_USERNAME")}],
+        "subject": f"Nova mensagem do site - {nome}",
+        "htmlContent": f"""
+        <p><strong>Nome:</strong> {nome}</p>
+        <p><strong>E-mail:</strong> {email}</p>
+        <p><strong>Mensagem:</strong><br>{mensagem}</p>
+        """
+    }
+
+    response = requests.post(
+        "https://api.brevo.com/v3/smtp/email",
+        headers={
+            "accept": "application/json",
+            "content-type": "application/json",
+            "api-key": os.getenv("MAIL_API_KEY")
+        },
+        json=data
+    )
+
+    if response.status_code in [200, 201]:
+        return "Mensagem enviada com sucesso!"
+    else:
+        return f"Erro ao enviar: {response.text}"
+
 
 
 'from flask import Flask, render_template'
@@ -55,6 +84,7 @@ def enviar():
 
     mail.send(msg)
     return render_template('/confirmacao.html', nome=nome)
+
 
 
 
