@@ -57,6 +57,6 @@ def enviar():
     return render_template('/confirmacao.html', nome=nome)
 
 
-if __name__ == "__main__":
-    app.run(debug=False)
+
+
 
